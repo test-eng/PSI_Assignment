@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+apply from: '../versions.gradle'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.psi"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    implementation "androidx.core:core-ktx:$androidx_core_version"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_constrainlayout_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycler_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycler_version"
+    implementation "com.karumi:dexter:$dexter_version"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rxjava_retrofit_adapter_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
+    implementation "com.google.android.gms:play-services-maps:$google_service_version"
+    implementation "com.google.maps.android:android-maps-utils:$google_map_util_version"
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_expresso_version"
+
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$kotlin_mockito_version"
+    testImplementation "android.arch.core:core-testing:$arch_core_testing"
+}

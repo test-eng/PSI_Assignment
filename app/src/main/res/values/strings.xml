@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pollutant Standards Index</string>
+    <string name="o3_sub_index">O3 Sub Index</string>
+    <string name="o3_eight_hour_max">Max of O3 8 Hours</string>
+    <string name="pm10_twenty_four_hourly">PM10 Daily</string>
+    <string name="pm10_sub_index">PM10 Sub Index</string>
+    <string name="co_sub_index">CO Sub Index</string>
+    <string name="co_eight_hour_max">CO 8 hours</string>
+    <string name="pm25_twenty_four_hourly">PM25 Daily</string>
+    <string name="pm25_sub_index">PM25 Sub Index</string>
+    <string name="so2_sub_index">SO2 Sub Index</string>
+    <string name="so2_twenty_four_hourly">SO2 Daily</string>
+    <string name="no2_one_hour_max">NO2</string>
+    <string name="psi_twenty_four_hourly">PSI Daily</string>
+</resources>
